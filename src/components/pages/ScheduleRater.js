@@ -24,7 +24,13 @@ const ContactUs = () => {
                             <form id="Paste" action="">
                             </form>
                             <p>{"value" in data ? data["value"] : "TODO: spawn the components using these classes"}</p>
-                        </div>                        
+                            <p>Go to SPIRE and copy your Shopping Cart or Class Schedule to paste into the website as shown below</p>
+                            <img src = "scheduleExample.jpg" alt="Example Schedule" height="300" width="400" class="center"></img>
+                            <img src = "scheduleExample2.jpg" alt="Example Schedule" height="300" width="400" class="center"></img>
+                        </div>
+                        <div>
+                            
+                        </div>
                     </div>
                 </div>
             </section>
@@ -142,4 +148,8 @@ function MultilineTextFields(props) {
             outputString +=output[x] + " ";
         }
         return outputString;
+    }
+    function tutorial()
+    {
+        
     }
