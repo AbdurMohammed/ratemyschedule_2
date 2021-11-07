@@ -62,8 +62,7 @@ function MultilineTextFields(props) {
         <div>
             <TextField
                 id="outlined-multiline-flexible"
-                label="Paste Schedule Here"
-                multiline
+                label="[Click to Paste Schedule]"
                 resize
                 maxRows={50}
                 value={fieldValue}
