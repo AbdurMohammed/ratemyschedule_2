@@ -10,6 +10,17 @@
       "StackName": "amplify-ratemyschedule2-dev-150648",
       "StackId": "arn:aws:cloudformation:us-east-1:662966882014:stack/amplify-ratemyschedule2-dev-150648/b2d31530-3f34-11ec-a798-0a2e4ef92ed3",
       "AmplifyAppId": "d3gx0jgghi2lhm"
+    },
+    "categories": {
+      "auth": {
+        "ratemyschedule2d3966f10": {}
+      },
+      "function": {
+        "getFromS3": {
+          "deploymentBucketName": "amplify-ratemyschedule2-dev-150648-deployment",
+          "s3Key": "amplify-builds/getFromS3-6c7566745a396f6d3067-build.zip"
+        }
+      }
     }
   }
 }

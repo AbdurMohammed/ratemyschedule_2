@@ -1,17 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import Button from '@mui/material/Button';
-
+import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <Button variant="contained" color="primary">
-         test
-       </Button>
-      </header>
+      <Navbar />
     </div>
   );
 }
+
+
+
 
 export default App;
