@@ -1,8 +1,6 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-//import printClasses from './page functionality/Converter'
-//import MultilineTextFields from '../MultilineTextFields';
 import { useState } from "react";
 
 var inputText = ''
@@ -25,7 +23,7 @@ const ContactUs = () => {
                         <MultilineTextFields callback={updateData}/>
                             <form id="Paste" action="">
                             </form>
-                            <p>{"value" in data ? data["value"] : "Nothing Pasted"}</p>
+                            <p>{"value" in data ? data["value"] : "TODO: spawn the components using these classes"}</p>
                         </div>                        
                     </div>
                 </div>
@@ -76,29 +74,29 @@ function MultilineTextFields(props) {
     );
   }
 
-  function printClasses(str) {
-    const paragraphs = str.split(/\n\s\n|\n\n/);
-    var parLength = paragraphs.length;
-    const phrases = new Array(parLength);
-    //divide larger paragraphs into phrases (Phrases is an array of arrays)
-    for (var j = 0; j < paragraphs.length; j++){
-        phrases[j] = paragraphs[j].split(/[\t,\n]/);
-    }
-    //remove spaces in each phrase
-    for (var x = 0; x < phrases.length; x++){
-        for (var y = phrases.length - 1; y >= 0; y--){
-            if ((phrases[x][y]) == " "){
-                phrases[x].splice(y, 1);
-            }
-        }
-    }
-    //print phrases
-    var outputString = "";
-    for (x = 1; x < phrases.length; x++){
-        outputString += (phrases[x][0].split(" ")[0] + "," + phrases[x][0].split(" ")[1].substring(0, 3) + "," + phrases[x][4] + "\n");
-    }
-    return outputString;
-}
+//   function printClasses(str) {
+//     const paragraphs = str.split(/\n\s\n|\n\n/);
+//     var parLength = paragraphs.length;
+//     const phrases = new Array(parLength);
+//     //divide larger paragraphs into phrases (Phrases is an array of arrays)
+//     for (var j = 0; j < paragraphs.length; j++){
+//         phrases[j] = paragraphs[j].split(/[\t,\n]/);
+//     }
+//     //remove spaces in each phrase
+//     for (var x = 0; x < phrases.length; x++){
+//         for (var y = phrases.length - 1; y >= 0; y--){
+//             if ((phrases[x][y]) == " "){
+//                 phrases[x].splice(y, 1);
+//             }
+//         }
+//     }
+//     //print phrases
+//     var outputString = "";
+//     for (x = 1; x < phrases.length; x++){
+//         outputString += (phrases[x][0].split(" ")[0] + "," + phrases[x][0].split(" ")[1].substring(0, 3) + "," + phrases[x][4] + "\n");
+//     }
+//     return outputString;
+//     }   
 
     function betterPrintClasses(str){
         console.log("STARTING NOW");
@@ -112,8 +110,8 @@ function MultilineTextFields(props) {
 
         //If you find an element of the format (#####)
         // Assign the previous 2 elements to var_Course and var_Num
-        // If you find an Initial of format [A-Z].  
-        //     If it ends in a comma, ignore the initial and name after this one
+        // If you find an firstInitial of format [A-Z].  
+        //     If the surname ends in a comma, ignore the initial and name after this one
         //     Assign the initial and the first name to var_Prof
         // If you find the Credits of format X.XX, the previous three values belong to a lecture section. Add these three values into an array. 
 
@@ -137,6 +135,8 @@ function MultilineTextFields(props) {
                 output.push(prof);
             }
         }
+        //output can just as easily be an array, if the return value was just the output. 
+        //output would be in format "ABBREVIATION", "3-Digit Number", "FirstInitial. Surname", "ABBREVIATION of 2nd class" , ... etc.
         var outputString = "";
         for (var x = 0; x < output.length; x++){
             outputString +=output[x] + " ";
