@@ -45,7 +45,6 @@
     border-radius: 5px;
     -webkit-transition: 1s;
     transition: 1s;
-    justify-self: center;
 }
 
 .button:hover {

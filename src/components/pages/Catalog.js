@@ -1,6 +1,25 @@
 import React from 'react'
+import { FormControl } from '@material-ui/core';
+import { InputLabel } from '@material-ui/core';
+import { Select } from '@material-ui/core';
+import { MenuItem } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
+const useStyles = makeStyles((theme) => ({
+    formControl: {
+        margin: theme.spacing(1),
+        minWidth: 200
+    }
+}))
 
 const Catalog = () => {
+
+    const classes = useStyles()
+    
+    const [subject, setValue] = React.useState('')
+
+    const handleChange = (event) => {
+        setValue(event.target.subject)
+    }
     return (
         <React.Fragment>
             <section className="content-container">
@@ -11,20 +30,23 @@ const Catalog = () => {
                     </p>
 
                     <p>
-                        
+                        <FormControl fullWidth>
+                            <InputLabel id="demo-simple-select-label">Subject</InputLabel>
+                                <Select
+                                 labelId="select"
+                                 id="subject-select"
+                                 value={subject}
+                                 label="Subject"
+                                 onChange={handleChange}
+                                >
+                            <MenuItem subject={'Computer Science'}>Computer Science</MenuItem>
+                            <MenuItem subject={'Mathematics'}>Mathematics</MenuItem>
+                            <MenuItem subject={'Biology'}>Biology</MenuItem>
+                        </Select>
+                    </FormControl>
                     </p>
 
-                    <p>
-                        
-                    </p>
-
-                    <p>
-                        
-                    </p>
-
-                    <p>
-                        
-                    </p>
+                    
                 </div>
             </section>
         </React.Fragment>
