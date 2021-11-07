@@ -5,6 +5,7 @@ import { Select } from '@material-ui/core';
 import { MenuItem } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import { AppApiClient } from './AppApiClient';
+import { AppApiClientForm } from './AppApiClientForm';
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -21,6 +22,9 @@ const Catalog = () => {
 
     const data =  AppApiClient.getCSV("Computer Science");
     console.log(data);
+
+    const data2 =  AppApiClientForm.getCSV();
+    console.log(data2);
 
     const handleChange = (event) => {
         setValue(event.target.subject)

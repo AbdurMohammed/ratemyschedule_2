@@ -4,7 +4,7 @@ import axios from "axios";
 const API_BASE_URL = "https://75bz9a7yu6.execute-api.us-east-2.amazonaws.com/test/getcsv?major=music";
 
 
-export const AppApiClient = {
+export const AppApiClientForm = {
     // getCSV: async (major) => {
     //     const requestData = {
     //         method: "get",
@@ -17,10 +17,10 @@ export const AppApiClient = {
     //     return data;
     // },
 
-    getCSV: () =>
+    getCSV: (major) =>
     axios({
         'method':'GET',
-        'url':'https://75bz9a7yu6.execute-api.us-east-2.amazonaws.com/test/getcsv?major=music',
+        'url':'https://vlqf2a82b1.execute-api.us-east-2.amazonaws.com/getForm/getcsv',
         // 'params': {
         //     'major':'music',
         // },
