@@ -8,7 +8,7 @@ const Header = () => {
             <header className="bg-image">
                 <div className="bg-container">
                     <h1>Rate My Schedule</h1>
-                    <h2>Is your class scheudle hot or not?!??!</h2>
+                    <h2>Is your class schedule hot or not?!??!</h2>
                     <Link to="/ScheduleRater">Test it now!</Link>
                 </div>
             </header>

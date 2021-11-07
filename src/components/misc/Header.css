@@ -3,7 +3,7 @@ header{
     background: #37387a;
     background-image: url('../../images/space.jpg');
     min-height: 50vh;
-    padding-top: 20vh;
+    padding-top: 13vh;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -14,13 +14,13 @@ header{
 }
   
 header h1{
-    font-size: 3rem;
+    font-size: 7rem;
     margin: 0 0 1rem;
 }
 
 header h2{
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 3rem;
     margin: 0 0 1rem;
 }
 
