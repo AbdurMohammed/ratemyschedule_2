@@ -17,6 +17,9 @@ const Catalog = () => {
     
     const [subject, setValue] = React.useState('')
 
+    const data =  AppApiClient.getCSV("Computer Science");
+    console.log(data);
+
     const handleChange = (event) => {
         setValue(event.target.subject)
     }
