@@ -7,9 +7,9 @@ const Header = () => {
         <React.Fragment>
             <header className="bg-image">
                 <div className="bg-container">
-                    <h1>Awesome Title</h1>
-                    <h2>Placeholder for home page header</h2>
-                    <Link to="/">Book Now!</Link>
+                    <h1>Rate My Schedule</h1>
+                    <h2>Is your class scheudle hot or not?!??!</h2>
+                    <Link to="/ScheduleRater">Test it now!</Link>
                 </div>
             </header>
         </React.Fragment>
