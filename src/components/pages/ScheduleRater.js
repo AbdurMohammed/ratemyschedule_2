@@ -1,6 +1,7 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import MultilineTextFields from '../MultilineTextFields';
 
 const ContactUs = () => {
     return (
@@ -13,6 +14,7 @@ const ContactUs = () => {
                 <div className="block">
                     <div className="row">
                         <div className="col-left">
+                        <MultilineTextFields/>
                             <form id="contact" action="">
                                 <h4>Paste your schedule in the box below!</h4>
                                 <fieldset>
@@ -22,8 +24,8 @@ const ContactUs = () => {
                                     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                                 </fieldset>
                             </form>
-                        </div>
-                        
+                            <h4>event.target.value</h4>
+                        </div>                        
                     </div>
                 </div>
             </section>
