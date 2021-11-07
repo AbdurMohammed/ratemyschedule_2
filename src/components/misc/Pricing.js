@@ -9,19 +9,19 @@ const Home = () => {
             <section className="content-container">
             <div className="columns">
                 <Box textAlign='center'>
-                <Button variant="outlined">Text</Button>
+                <Button variant="outlined" href="/">Home</Button>
                 </Box>
                 </div>
 
                 <div className="columns">
                 <Box textAlign='center'>
-                <Button variant="outlined">Text</Button>
+                <Button variant="outlined" href="/Catalog">Catalog</Button>
                 </Box>
                 </div>
 
                 <div className="columns">
                 <Box textAlign='center'>
-                <Button variant="outlined">Text</Button>
+                <Button variant="outlined" href="/ScheduleRater">Schedule Rater</Button>
                 </Box>
             </div>
 
