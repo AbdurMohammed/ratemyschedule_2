@@ -16,6 +16,7 @@ const ContactUs = () => {
             <section className="content-container">
                 <div className="textArea"> 
                     <h2>Schedule Rater</h2>
+                    <p>(SPIRE Home/Enrollment Shopping Cart/~Copy either the Shopping Cart Table or the Class Table below it~) </p>
                 </div>
                 <div className="block">
                     <div className="row">
@@ -66,8 +67,9 @@ function MultilineTextFields(props) {
         <div>
             <TextField
                 id="outlined-multiline-flexible"
-                label="[Click to Paste Schedule]"
-                resize
+                label="[--PASTE TABLE HERE--]"
+                size="100"
+                maxlength="8"
                 maxRows={50}
                 value={fieldValue}
                 onChange={(e) => setValue(e.target.value)}>
