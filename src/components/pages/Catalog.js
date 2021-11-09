@@ -5,6 +5,8 @@ import { Select } from '@material-ui/core';
 import { MenuItem } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import { AppApiClient } from './AppApiClient';
+import { parse } from 'papaparse';
+
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -13,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
+    
+
 const Catalog = () => {
 
     const classes = useStyles()
@@ -20,7 +24,12 @@ const Catalog = () => {
     const [subject, setValue] = React.useState('')
 
     const data =  AppApiClient.getCSV("Computer Science");
-    console.log(data);
+    const parseFile = data => {
+        parse(data, {
+            header: true,
+        });
+    };
+    console.log(parseFile);
 
     const handleChange = (event) => {
         setValue(event.target.subject)
@@ -33,7 +42,6 @@ const Catalog = () => {
                     <p>
                         Here you can browse various ratings for UMass classes based on your major. Select a subject from the drop down below!
                     </p>
-
                     <p>
                         <FormControl fullWidth>
                             <InputLabel id="demo-simple-select-label">Subject</InputLabel>
@@ -50,8 +58,6 @@ const Catalog = () => {
                         </Select>
                     </FormControl>
                     </p>
-
-                    
                 </div>
             </section>
         </React.Fragment>
